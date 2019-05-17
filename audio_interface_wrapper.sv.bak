@@ -1,0 +1,39 @@
+module audio_interface_wrapper (
+											input [15:0] LDATA, // matters
+															 RDATA, // matters
+											input        clk,
+											input			 Reset,
+											input			 INIT, // matters
+											output logic INIT_FINISH, // matters
+											output logic adc_full, // matters
+//											output logic data_over, // doesn't matter
+											output logic AUD_MCLK,
+											input			 AUD_BCLK,
+											input			 AUD_ADCDAT,
+											output logic AUD_DACDAT,
+											input			 AUD_DACLRCK,
+															 AUD_ADCLRCK,
+											output logic I2C_SDAT,
+											output logic I2C_SCLK
+//											output logic ADCDATA // doesn't matter
+										 );
+
+	audio_interface audio (
+									.LDATA, // matters
+									.RDATA, // matters
+									.clk,
+									.Reset,
+									.INIT, // matters
+									.INIT_FINISH, // matters
+									.adc_full(), // matters
+									.AUD_MCLK,
+									.AUD_BCLK,
+									.AUD_ADCDAT,
+									.AUD_DACDAT,
+									.AUD_DACLRCK,
+									.AUD_ADCLRCK,
+									.I2C_SDAT,
+									.I2C_SCLK
+								  );
+										 
+endmodule

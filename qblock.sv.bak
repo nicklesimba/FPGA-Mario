@@ -1,0 +1,19 @@
+//module qblock(
+//					input        Clk,                // 50 MHz clock
+//                            Reset,              // Active-high reset signal
+//                            frame_clk,          // The clock indicating a new frame (~60Hz)
+//               input [9:0]  DrawX, DrawY,       // Current pixel coordinates
+//					input [1:0]  roomNum,				// game's roomNum
+//					input	[1:0]	 myRoomNum,				// block's roomNum
+//					input [9:0]  posX, posY,	      // location of qblock - will never change
+//					input [9:0]	 marioX, marioY,		// mario's coordinates for collision with qblock
+//					input 		 is_alive_mario,		// is mario alive? - if mario bumps a qblock while dead nothing should happen
+//               output logic is_qblock,          // Whether current pixel belongs to qblock or background
+//					output logic blink_num,	   		// animation for qblock blinking
+//					output logic is_empty,				// is qblock empty? - used for animation and for qblock logic
+//					output logic [8:0] goomba_address,  // outputs goomba's address for sprite drawing
+//					output logic [9:0] Goomba_X_Pos, Goomba_Y_Pos, // current position
+//					output logic is_alive_goomba
+//				 );
+//	
+//endmodule

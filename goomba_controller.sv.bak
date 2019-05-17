@@ -1,0 +1,38 @@
+module goomba_controller (
+									input        Clk,                // 50 MHz clock
+												    Reset,              // Active-high reset signal
+													 frame_clk,          // The clock indicating a new frame (~60Hz)
+									input [1:0]	 roomNum,				// current "level"
+									input [9:0]  DrawX, DrawY,       // Current pixel coordinates
+									output logic is_goomba,   			// signal for checking to see if a coordinate is a goomba
+									output logic [8:0] goomba_address		// index of goomba for sprite drawing
+								 );
+	
+	//enemy placements
+		//room 0
+		goomba r1_1(.Clk, .Reset, .frame_clk, .DrawX, .DrawY, ); // 260, 220
+		//room 1
+		
+		//room 2
+	
+	
+ input        Clk,                // 50 MHz clock
+                             Reset,              // Active-high reset signal
+                             frame_clk,          // The clock indicating a new frame (~60Hz)
+               input [9:0]   DrawX, DrawY,       // Current pixel coordinates
+					input [9:0]   startX, startY,	    // initial location
+//					input logic   is_ball,				 // mario's position
+               output logic  is_goomba,            // Whether current pixel belongs to Goomba or background
+					output logic  [8:0] goomba_address,// outputs mario's address for sprite drawing
+              );	
+	
+	always_comb
+	begin
+		case(roomNum)
+			2'd0:
+				begin
+				
+				end
+	end
+							 
+endmodule
